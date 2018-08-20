@@ -43,9 +43,17 @@ function noWeakLink() {
     method: 'GET',
     url: '/api/users'
   })
-  // CODE HERE...
+          .then(function(res){
+           firstUser=res.data[0];
+             return res; 
+         })
+         .then(function(res){
+           thirdUser=res.data[2];
+         return res.data[9];
+       })
+      }
 
-}
+      
 
 
 
